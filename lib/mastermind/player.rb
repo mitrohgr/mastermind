@@ -8,6 +8,13 @@ class Player
   end
 end
 
+class Human < Player
+  def guess_code
+    print '=> Take a guess: '
+    gets.chomp
+  end
+end
+
 class Computer < Player
   def generate_code
     colors.map { |color| color[0].upcase }.join
