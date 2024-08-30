@@ -9,6 +9,11 @@ class Player
 end
 
 class Human < Player
+  def generate_code
+    print '=> Create a secret code: '
+    gets.chomp
+  end
+
   def guess_code
     print '=> Take a guess: '
     gets.chomp
