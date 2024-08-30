@@ -21,7 +21,7 @@ class Human < Player
 
   def guess_code
     while true
-      print '=> Create the code: '
+      print '=> Guess the code: '
       choice = gets.chomp
       break if valid?(choice)
     end
