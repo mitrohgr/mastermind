@@ -3,6 +3,13 @@ require_relative 'mastermind/player'
 
 module Mastermind
   def self.start
-    Game.new(Computer.new, Human.new).play
+    print "=> Type 'c' to create code or 'g' to guess code: "
+    choice = gets.chomp
+    case choice
+    when 'c'
+      Game.new(Human.new, Computer.new).play
+    when 'g'
+      Game.new(Computer.new, Human.new).play
+    end
   end
 end
