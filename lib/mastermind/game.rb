@@ -6,8 +6,8 @@ class Game
 
   def initialize(code_maker, code_breaker)
     @secret_code = ''
-    @code_maker = code_maker
-    @code_breaker = code_breaker
+    @code_maker = code_maker.new(self)
+    @code_breaker = code_breaker.new(self)
   end
 
   def evaluate(secret_code, guessed_code)

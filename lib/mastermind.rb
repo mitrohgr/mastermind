@@ -7,9 +7,9 @@ module Mastermind
     choice = gets.chomp
     case choice
     when 'c'
-      Game.new(Human.new, Computer.new).play
+      Game.new(Human, Computer).play
     when 'g'
-      Game.new(Computer.new, Human.new).play
+      Game.new(Computer, Human).play
     end
   end
 end
