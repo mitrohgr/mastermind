@@ -1,5 +1,5 @@
 class Game
-  TURNS = 22
+  TURNS = 12
 
   attr_reader :code_maker, :code_breaker
   attr_accessor :secret_code
