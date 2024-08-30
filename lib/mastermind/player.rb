@@ -11,13 +11,28 @@ end
 
 class Human < Player
   def generate_code
-    print '=> Create a secret code: '
-    gets.chomp
+    while true
+      print '=> Create the code: '
+      choice = gets.chomp
+      break if valid?(choice)
+    end
+    choice
   end
 
   def guess_code
-    print '=> Take a guess: '
-    gets.chomp
+    while true
+      print '=> Create the code: '
+      choice = gets.chomp
+      break if valid?(choice)
+    end
+    choice
+  end
+
+  def valid?(choice)
+    return false unless choice.length == 4 && !choice.empty?
+
+    colors = COLORS.map { |color| color[0].upcase }.join
+    choice.chars.each.all? { |c| colors.include?(c) }
   end
 end
 

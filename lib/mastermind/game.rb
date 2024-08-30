@@ -1,5 +1,5 @@
 class Game
-  TURNS = 12
+  TURNS = 22
 
   attr_reader :code_maker, :code_breaker
   attr_accessor :secret_code
@@ -30,7 +30,6 @@ class Game
 
   def play
     self.secret_code = code_maker.generate_code
-    puts "code: #{secret_code}"
     TURNS.times do |turn|
       guessed_code = code_breaker.guess_code
       pegs = evaluate(secret_code, guessed_code)
